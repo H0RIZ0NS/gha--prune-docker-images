@@ -1,0 +1,20 @@
+{
+  "name": "@H0RIZ0NS/action-docker-prune",
+  "author": "Fabien Schurter",
+  "description": "A GitHub action that removes a repository’s untagged container package versions.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "homepage": "https://github.com/H0RIZ0NS/action-docker-prune",
+  "bugs": {
+    "url" : "https://github.com/H0RIZ0NS/action-docker-prune/issues"
+  },
+  "engines": {
+    "node": "~16.15.1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.8.2",
+    "@actions/github": "^5.0.3",
+    "dotenv": "^16.0.1"
+  }
+}
