@@ -38,9 +38,7 @@ let getRepo = (client, repoFullName) => {
 let getRepoPackages = (client, repo) => {
   let selectRepoPackages = (pkg) => pkg.repository.full_name === repo.full_name
 
-  let transformResponse = (response) => (
-    response.data.filter(selectRepoPackages)
-  )
+  let transformResponse = (response) => response.data.filter(selectRepoPackages)
 
   log('Fetching the repository’s linked container packages…')
 
