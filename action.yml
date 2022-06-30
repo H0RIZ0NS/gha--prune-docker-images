@@ -15,6 +15,7 @@ inputs:
 
   gh_token:
     description: >
-      A GitHub personal access token including at least the `read:packages` and
-      `delete:packages` scopes.
+      A GitHub personal access token owning at least the `read:packages` and
+      `delete:packages` scopes, as well as the `repo` scope if the target
+      repository is private.
     required: true
