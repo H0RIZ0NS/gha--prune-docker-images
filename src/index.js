@@ -4,13 +4,9 @@ import { config as dotenv } from 'dotenv'
 
 const CONTAINER_PACKAGE_TYPE = 'container'
 
-let log = (message) => {
-  core.info(message)
-}
+let log = core.info
 
-let handleError = (error) => {
-  core.setFailed(error)
-}
+let handleError = core.setFailed
 
 let loadDotenv = (environment) => {
   if (environment && environment !== 'production') {
@@ -58,7 +54,7 @@ let getRepoPackages = (client, repo) => {
         client.packages
           .listPackagesForUser({
             package_type: CONTAINER_PACKAGE_TYPE,
-            user: repo.owner.login,
+            username: repo.owner.login,
           })
           .then(transformResponse)
       )
